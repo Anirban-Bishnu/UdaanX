@@ -1,24 +1,22 @@
 {
   "cli": {
-    "version": ">= 15.0.15",
-    "appVersionSource": "remote"
+    "version": ">= 3.13.2"
   },
   "build": {
-    "development": {
-      "developmentClient": true,
-      "distribution": "internal"
-    },
-    "preview": {
-      "distribution": "internal"
-    },
     "production": {
+      "distribution": "store",
       "android": {
-        "buildType": "apk"   
+        "buildType": "aab"
       },
       "ios": {
-        "simulator": true    
-      },
-      "autoIncrement": true
+        "simulator": false
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      }
     }
   },
   "submit": {
